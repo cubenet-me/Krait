@@ -1,0 +1,73 @@
+// Полный пример программы на Backenium
+// Демонстрирует все поддерживаемые возможности
+
+// Функция без параметров и без возвращаемого типа
+func greet()
+    print("Welcome to Backenium!")
+end
+
+// Функция с параметрами (синтаксис: параметр тип)
+func add(a int, b int) -> int
+    return a + b
+end
+
+// Функция с условиями
+func max(x int, y int) -> int
+    if x > y
+        return x
+    else
+        return y
+    end
+end
+
+// Рекурсивная функция
+func factorial(n int) -> int
+    if n <= 1
+        return 1
+    else
+        return n * factorial(n - 1)
+    end
+end
+
+// Функция со строками
+func greet_user(name txt) -> txt
+    auto greeting = "Hello, " + name
+    return greeting
+end
+
+// Основная функция - точка входа программы
+func main()
+    print("=== Backenium Demo ===")
+    
+    // Вызовы функций
+    greet()
+    
+    // Вычисления
+    auto sum = add(10, 20)
+    print("Sum: ")
+    
+    // Условия
+    int max_val = max(15, 25)
+    print("Max value: ")
+    
+    // Рекурсия
+    int fact = factorial(5)
+    print("5! = ")
+    
+    // Работа со строками
+    txt msg = greet_user("Alice")
+    print("Message: ")
+end
+
+// Web роуты (для будущего использования с веб-сервером)
+@route "/api/add" POST
+    int a = 5
+    int b = 3
+    int result = add(a, b)
+    return result
+end
+
+@route "/api/status" GET
+    txt status = "OK"
+    return status
+end

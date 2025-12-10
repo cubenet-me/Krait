@@ -1,0 +1,7 @@
+private func secret()
+    print("secret")
+end
+
+public func main()
+    print("main")
+end

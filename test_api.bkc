@@ -1,0 +1,23 @@
+import api from rest
+
+func get_users() -> txt
+    return "users list"
+end
+
+func get_user_by_id(int id) -> txt
+    return "user"
+end
+
+@route "/api/users" GET
+    txt users = get_users()
+    return users
+end
+
+@route "/api/users" POST
+    int new_id = 1
+    return new_id
+end
+
+func main()
+    print("API Server running")
+end

@@ -1,0 +1,12 @@
+public func add(int a, int b) -> int
+    return a + b
+end
+
+private func helper()
+    print("helper")
+end
+
+func main()
+    int result = add(5, 3)
+    print("Result")
+end

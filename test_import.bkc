@@ -1,0 +1,21 @@
+import api from rest
+
+func get_status() -> txt
+    return "ok"
+end
+
+@route "/api/status" GET
+    txt status = get_status()
+    return status
+end
+
+@route "/api/calculate" POST
+    int x = 10
+    int y = 20
+    int sum = x + y
+    return sum
+end
+
+func main()
+    print("API Server running")
+end

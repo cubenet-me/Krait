@@ -1,0 +1,4 @@
+// Пример программы на Krait
+public func main()
+    print("Hello from Krait!")
+end

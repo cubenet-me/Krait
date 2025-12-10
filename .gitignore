@@ -1,0 +1,31 @@
+# Rust
+/target/
+Cargo.lock
+**/*.rs.bk
+*.pdb
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Krait build output
+/rust_code/
+*.kr.rs
+*.krm.rs
+
+# Test files
+/test_*/
+*.out
+
+# Generated files
+generated/
+dist/
+
+# OS
+Thumbs.db
+.env
+.env.local

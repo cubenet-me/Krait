@@ -1,0 +1,79 @@
+// Пример полного BKM файла с демонстрацией возможностей транслятора
+// ================================================================
+
+// 1. Простые функции с разными типами
+// ===================================
+
+// Функция для сложения двух чисел
+func add(int a, int b) -> int {
+    return a + b;
+}
+
+// Функция для вычисления факториала (рекурсия)
+func factorial(int n) -> int {
+    if (n <= 1) {
+        return 1;
+    } else {
+        return n * factorial(n - 1);
+    }
+}
+
+// Функция для проверки четности числа
+func is_even(int x) -> bool {
+    return (x % 2) == 0;
+}
+
+// Функция для максимума из двух чисел
+func max(int a, int b) -> int {
+    if (a > b) {
+        return a;
+    } else {
+        return b;
+    }
+}
+
+// Функция для работы со строками
+func greet(txt name) -> txt {
+    txt greeting = "Hello, " + name;
+    return greeting;
+}
+
+// Функция с несколькими переменными
+func calculate(int x, int y) -> int {
+    int sum = x + y;
+    int product = x * y;
+    int result = sum + product;
+    return result;
+}
+
+// 2. Web роуты (экспериментально)
+// ===============================
+
+// GET роут - получение данных
+@route "/api/greet" GET {
+    txt name = "World";
+    txt greeting = "Hello, " + name;
+    return greeting;
+}
+
+// POST роут - обработка данных
+@route "/api/add" POST {
+    int a = 5;
+    int b = 3;
+    int result = add(a, b);
+    return result;
+}
+
+// Роут с вычислением факториала
+@route "/api/factorial" POST {
+    int num = 5;
+    int fact = factorial(num);
+    return fact;
+}
+
+// Роут с проверкой четности
+@route "/api/check-even" POST {
+    int value = 42;
+    bool even = is_even(value);
+    return even;
+}
